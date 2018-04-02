@@ -55,5 +55,10 @@ Rails.application.configure do
   BetterErrors::Middleware.allow_ip! ENV ['TRUSTED_IP'] if ENV['TRUSTED_IP']
 
   # Default mail port and host for testes DEVISE
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # MailCatcher
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
 end
