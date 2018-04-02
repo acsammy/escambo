@@ -1,0 +1,16 @@
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-3">
+
+      <h1 class="my-4">Categorias</h1>
+      <div class="list-group">
+        <% @categories.each do |category| %>
+          <a href="#" class="list-goup-item"><%= category.description %></a>
+        <% end%>
+      </div>
+
+    </div>
+    <!-- /.col-lg-3 -->
