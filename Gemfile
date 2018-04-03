@@ -35,7 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
-
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 
 
 # Use Redis adapter to run Action Cable in production
