@@ -39,6 +39,8 @@ gem "pundit"
 gem 'lerolero_generator'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails', '~>1'
+# Easy file attachment management for ActiveRecord
+gem "paperclip", "~> 6.0.0"
 
 
 # Use Redis adapter to run Action Cable in production
