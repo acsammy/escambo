@@ -1,4 +1,21 @@
 namespace :utils do
+
+  desc "Setup Development"
+  task setup_dev: :environment do
+    puts "Executando o setup para  desenvolvimento"
+    puts "APAGANDO BD..." %x(rake db:drop)
+    puts "CRIANDO BD" %x(rake db:create)
+    puts %x(rake db:migrate)
+    puts %x(rake db:seed)
+    puts %x(rake utils:generate_admins)
+    puts %x(rake utils:generate_members)
+    puts %x(rake utils:generate_ads)
+
+    puts "-----------------Setup cadastrado com sucesso!"
+  end
+
+# ---------------------------------------------------------------- #
+
   desc "Cria Administradores Fakes"
   task generate_admins: :environment do
     puts "Cadastrando os Adminstradores"
@@ -13,22 +30,14 @@ namespace :utils do
       puts "Cadastrando MEMBROS..."
 
       100.times do
-        #member = Member.new(
-
         Member.create!(
           email: Faker::Internet.email,
           password: "123456",
           password_confirmation: "123456"
-        )
-        #member.build_profile_member
-
-        #member.profile_member.first_name = Faker::Name.first_name
-        #member.profile_member.second_name = Faker::Name.last_name
-
-        #member.save!
+          )
       end
 
-      puts "MEMBROS cadastrados com sucesso!"
+      puts "-----------------MEMBROS cadastrados com sucesso!"
     end
 # ---------------------------------------------------------------- #
   desc "Cria Anúncios Fake"
