@@ -24,6 +24,10 @@ db:structure:dump
 db:structure:load
 db:version
 dev:cache
+dev:generate_admins
+dev:generate_ads
+dev:generate_members
+dev:setup
 erd
 initializers
 log:clear
@@ -47,7 +51,4 @@ test:system
 time:zones[country_or_offset]
 tmp:clear
 tmp:create
-utils:generate_admins
-utils:generate_ads
-utils:generate_members
 yarn:install

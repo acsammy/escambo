@@ -8,12 +8,16 @@ end
 gem 'rails', '~> 5.1.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# the font-awesome font bundled as an asset for the rails asset pipeline
+gem "font-awesome-rails"
 # Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 # JavaScript Library
 gem 'nodejs-rails', '~> 0.0.1'
 # A gem to automate using jQuery with Rails
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+# jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
