@@ -13,7 +13,9 @@ class ApplicationController < ActionController::Base
   def layout_by_resource
     if devise_controller? && resource_name == :admin
       "backoffice_devise"
-    else
+    elsif devise_controller? && resource_name == :member
+      "site_devise"
+    else 
       "application"
     end
   end

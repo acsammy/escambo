@@ -59,8 +59,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # Bootstrap
   gem 'rails-assets-bootstrap'
-  # A JavaScript library
-  gem 'rails-assets-notifyjs'
+  # A JavaScript library Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
+  # Animated CSS
+  gem 'rails-assets-animate-css'
 
 end
 
