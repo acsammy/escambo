@@ -11,7 +11,7 @@ class Ad < ApplicationRecord
   scope :to_the, -> (member) { where(member: member) }
 
   #paperclip
-  has_attached_file :thumbnail, styles: { medium: "320x150#", thumb: "100x100" }, default_url: "missing.png"
+  has_attached_file :thumbnail, styles: { large: "800x300#", medium: "320x150#", thumb: "100x100" }, default_url: "missing.png"
   validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
 
   #gem Money Rails
